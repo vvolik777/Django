@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Корзина</h1>
+    <ul>
+        <!-- Генерация списка товаров в корзине -->
+        {% for item in cart_items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Итоговая стоимость:</strong> {{ total_price }}</p>
+    <form action="/">
+        <button type="submit">Вернуться на главную</button>
+    </form>
+</body>
+</html>

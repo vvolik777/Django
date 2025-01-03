@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Магазин</title>
+</head>
+<body>
+    <h1>Игры</h1>
+    <ul>
+        <!-- генерация списка с кнопками -->
+        {% for game, button in games.items %}
+        <li>{{ game }} <button>{{ button }}</button></li>
+        {% endfor %}
+    </ul>
+    <!-- кнопка для возврата на главную -->
+    <form action="/">
+        <button type="submit">Вернуться обратно</button>
+    </form>
+</body>
+</html>
