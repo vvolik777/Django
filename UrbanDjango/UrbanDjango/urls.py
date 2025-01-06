@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from task3.views import index, shop, cart
+# from task3.views import index, shop, cart
+from task4.views import index, shop, cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('task2/', include('task2.urls')),
-    path('', index, name='index'), # главная стр
-    path('shop/', shop, name='shop'), # стр магазина
-    path('cart/', cart, name='cart'), # стр корзины
+    path('', index, name='index'),  # главная стр
+    path('shop/', shop, name='shop'),  # стр магазина
+    path('cart/', cart, name='cart'),  # стр корзины
 ]
-

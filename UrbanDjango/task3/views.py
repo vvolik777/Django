@@ -11,7 +11,6 @@ def shop(request):
         "Cyberpunk 2077": "Купить",
         "PayDay 2": "Купить"
     }
-
     return render(request, 'third_task/shop.html', {'games': games})
 
 

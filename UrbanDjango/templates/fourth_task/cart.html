@@ -1,0 +1,15 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}
+Корзина
+{% endblock %}
+
+{% block content %}
+<h1>Корзина</h1>
+<p>Здесь будут ваши покупки!</p>
+<form action="{% url 'index' %}">
+    <button type="submit">
+        Вернуться обратно
+    </button>
+</form>
+{% endblock %}
