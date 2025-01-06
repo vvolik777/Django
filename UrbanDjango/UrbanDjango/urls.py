@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from task3.views import index, shop, cart
-from task4.views import index, shop, cart
+# from task4.views import index, shop, cart
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('task2/', include('task2.urls')),
-    path('', index, name='index'),  # главная стр
-    path('shop/', shop, name='shop'),  # стр магазина
-    path('cart/', cart, name='cart'),  # стр корзины
+    path('', sign_up_by_html, name='sign_up_by_html'),  # рега через HTML (главная стр)
+    path('django_sign_up/', sign_up_by_django, name='sign_up_by_django'),  # рега через джанго-формы
+    # path('shop/', shop, name='shop'),  # стр магазина
+    # path('cart/', cart, name='cart'),  #стр корзины
 ]
